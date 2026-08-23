@@ -4,32 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
+  <link rel="canonical" href="/en/">
   <title>Peter Tsai, Ph.D.</title>
-  <script>
-    (function () {
-      var routes = { en: '/en/', 'zh-tw': '/zh-tw/', 'zh-cn': '/zh-cn/' };
-      var saved = localStorage.getItem('site-lang');
-      if (saved && routes[saved]) {
-        location.replace(routes[saved]);
-        return;
-      }
-
-      var langs = navigator.languages && navigator.languages.length
-        ? navigator.languages
-        : [navigator.language || 'en'];
-      var target = '/en/';
-
-      for (var i = 0; i < langs.length; i++) {
-        var lang = String(langs[i]).toLowerCase();
-        if (/^zh-(tw|hk|mo|hant)/.test(lang)) { target = '/zh-tw/'; break; }
-        if (/^zh-(cn|sg|hans)/.test(lang) || lang === 'zh') { target = '/zh-cn/'; break; }
-        if (/^en/.test(lang)) { target = '/en/'; break; }
-      }
-
-      location.replace(target);
-    }());
-  </script>
-  <noscript><meta http-equiv="refresh" content="0;url=/zh-tw/"></noscript>
+  <script>location.replace('/en/');</script>
+  <noscript><meta http-equiv="refresh" content="0;url=/en/"></noscript>
 </head>
 <body></body>
 </html>
